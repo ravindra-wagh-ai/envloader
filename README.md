@@ -23,7 +23,7 @@ Change the configuration to connect database in .env file
         LOCAL
       </td>
       <td>
-        ENV_KEY according to your requirement
+        Change according to your requirement
       </td>
     </tr>
     <tr>
