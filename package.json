@@ -1,0 +1,16 @@
+{
+  "name": "envloader",
+  "version": "1.0.0",
+  "description": "Load environment variables using database",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ravindra Wagh",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "pg": "^8.12.0"
+  }
+}
