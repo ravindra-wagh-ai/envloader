@@ -1,4 +1,4 @@
-import data from "./pgql.js";
+import data from "./pgql";
 export default async () => {
   const query = "SELECT * FROM envs WHERE name= $1";
   const result = await data.read(query, [process.env.ENV_KEY]);

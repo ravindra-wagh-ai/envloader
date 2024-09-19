@@ -2,15 +2,18 @@
   "name": "@waghravi/envloader",
   "version": "1.0.3",
   "description": "Load environment variables using database",
-  "main": "index.js",
-  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ravindra Wagh",
   "license": "ISC",
   "devDependencies": {
-    "dotenv": "^16.4.5",
-    "pg": "^8.12.0"
+    "@types/dotenv": "^8.2.0",
+    "@types/pg": "^8.11.10",
+    "pg": "^8.12.0",
+    "typescript": "^5.6.2"
   }
 }

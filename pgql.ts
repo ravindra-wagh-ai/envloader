@@ -13,8 +13,8 @@ const reader = new pg.Pool({
   connectionTimeoutMillis: 30000,
 });
 
-export default {  
-  read: async (sql, values) => {
+export default {
+  read: async (sql: string, values: any[]) => {
     let result;
     let client = await reader.connect();
     try {
