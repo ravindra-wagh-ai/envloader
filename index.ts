@@ -8,6 +8,6 @@ export default async () => {
   fs.writeFileSync("app.env", "", "utf8");
   let keys = Object.keys(output);
   keys.forEach((k) => {
-    fs.appendFileSync("sample.txt", `${k}=${output[k]}`, "utf8");
+    fs.appendFileSync("app.env", `${k}=${output[k]}\n`, "utf8");
   });
 };
