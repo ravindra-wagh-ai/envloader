@@ -1,6 +1,6 @@
 {
   "name": "@waghravi/envloader",
-  "version": "3.0.7",
+  "version": "4.0.0",
   "description": "Load environment variables using database",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
