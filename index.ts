@@ -5,6 +5,7 @@ export default async () => {
   const result = await data.read(query, [process.env.ENV_KEY]);
   const output = result?.rows?.shift()?.value;
   //process.env = { ...process.env, ...output };
+  fs.unlinkSync("app.env");
   fs.writeFileSync("app.env", "", "utf8");
   let keys = Object.keys(output);
   keys.forEach((k) => {
