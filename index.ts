@@ -1,7 +1,9 @@
 import data from "./pgql";
+import fs from "fs";
 export default async () => {
   const query = "SELECT * FROM envs WHERE name= $1";
   const result = await data.read(query, [process.env.ENV_KEY]);
   const output = result?.rows?.shift()?.value;
-  process.env = { ...process.env, ...output };
+  //process.env = { ...process.env, ...output };
+  fs.appendFileSync('app.env', JSON.stringify(output), 'utf8');
 };
