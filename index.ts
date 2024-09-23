@@ -5,8 +5,11 @@ export default async () => {
   const result = await data.read(query, [process.env.ENV_KEY]);
   const output = result?.rows?.shift()?.value;
   //process.env = { ...process.env, ...output };
-  fs.unlinkSync("app.env");
-  fs.writeFileSync("app.env", "", "utf8");
+  try {
+    fs.unlinkSync("app.env");
+  } catch (e) {
+    console.log(e);
+  }
   let keys = Object.keys(output);
   keys.forEach((k) => {
     fs.appendFileSync("app.env", `${k}=${output[k]}\n`, "utf8");
